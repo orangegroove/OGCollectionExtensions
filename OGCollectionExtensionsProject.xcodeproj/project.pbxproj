@@ -19,6 +19,15 @@
 		09EA491517BE51B40026664E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA48FD17BE51B30026664E /* UIKit.framework */; };
 		09EA491D17BE51B40026664E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09EA491B17BE51B40026664E /* InfoPlist.strings */; };
 		09EA491F17BE51B40026664E /* OGCollectionExtensionsProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA491E17BE51B40026664E /* OGCollectionExtensionsProjectTests.m */; };
+		09EA494517BE52340026664E /* NSArray+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA492D17BE52340026664E /* NSArray+OGCollectionExtensions.m */; };
+		09EA494617BE52340026664E /* NSDictionary+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA492F17BE52340026664E /* NSDictionary+OGCollectionExtensions.m */; };
+		09EA494717BE52340026664E /* NSMutableArray+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA493117BE52340026664E /* NSMutableArray+OGCollectionExtensions.m */; };
+		09EA494817BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA493317BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.m */; };
+		09EA494917BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA493517BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.m */; };
+		09EA494A17BE52340026664E /* NSMutableSet+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA493717BE52340026664E /* NSMutableSet+OGCollectionExtensions.m */; };
+		09EA494B17BE52340026664E /* NSOrderedSet+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA493917BE52340026664E /* NSOrderedSet+OGCollectionExtensions.m */; };
+		09EA494C17BE52340026664E /* NSSet+OGCollectionExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA493B17BE52340026664E /* NSSet+OGCollectionExtensions.m */; };
+		09EA494D17BE52340026664E /* OGCollectionExtensionsPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA494417BE52340026664E /* OGCollectionExtensionsPrivate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,35 @@
 		09EA491A17BE51B40026664E /* OGCollectionExtensionsProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OGCollectionExtensionsProjectTests-Info.plist"; sourceTree = "<group>"; };
 		09EA491C17BE51B40026664E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09EA491E17BE51B40026664E /* OGCollectionExtensionsProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OGCollectionExtensionsProjectTests.m; sourceTree = "<group>"; };
+		09EA492817BE52080026664E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09EA492A17BE52080026664E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		09EA492C17BE52340026664E /* NSArray+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA492D17BE52340026664E /* NSArray+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA492E17BE52340026664E /* NSDictionary+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA492F17BE52340026664E /* NSDictionary+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA493017BE52340026664E /* NSMutableArray+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA493117BE52340026664E /* NSMutableArray+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA493217BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA493317BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA493417BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableOrderedSet+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA493517BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableOrderedSet+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA493617BE52340026664E /* NSMutableSet+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA493717BE52340026664E /* NSMutableSet+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA493817BE52340026664E /* NSOrderedSet+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOrderedSet+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA493917BE52340026664E /* NSOrderedSet+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOrderedSet+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA493A17BE52340026664E /* NSSet+OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+OGCollectionExtensions.h"; sourceTree = "<group>"; };
+		09EA493B17BE52340026664E /* NSSet+OGCollectionExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+OGCollectionExtensions.m"; sourceTree = "<group>"; };
+		09EA493C17BE52340026664E /* OGCollectionExtensionsConverting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsConverting.h; sourceTree = "<group>"; };
+		09EA493D17BE52340026664E /* OGCollectionExtensionsFiltering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsFiltering.h; sourceTree = "<group>"; };
+		09EA493E17BE52340026664E /* OGCollectionExtensionsMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsMapping.h; sourceTree = "<group>"; };
+		09EA493F17BE52340026664E /* OGCollectionExtensionsRetrieval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsRetrieval.h; sourceTree = "<group>"; };
+		09EA494017BE52340026664E /* OGCollectionExtensionsSafeMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsSafeMutation.h; sourceTree = "<group>"; };
+		09EA494117BE52340026664E /* OGCollectionExtensionsSafeRetrieval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsSafeRetrieval.h; sourceTree = "<group>"; };
+		09EA494217BE52340026664E /* OGCollectionExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensions.h; sourceTree = "<group>"; };
+		09EA494317BE52340026664E /* OGCollectionExtensionsPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsPrivate.h; sourceTree = "<group>"; };
+		09EA494417BE52340026664E /* OGCollectionExtensionsPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGCollectionExtensionsPrivate.m; sourceTree = "<group>"; };
+		09EA494E17BE52DD0026664E /* OGCollectionExtensionsCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsCommon.h; sourceTree = "<group>"; };
+		09EA494F17BE53410026664E /* OGCollectionExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc.preprocessed; path = OGCollectionExtensions.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +115,10 @@
 		09EA48ED17BE51B30026664E = {
 			isa = PBXGroup;
 			children = (
+				09EA494F17BE53410026664E /* OGCollectionExtensions.podspec */,
+				09EA492817BE52080026664E /* LICENSE */,
+				09EA492A17BE52080026664E /* README.md */,
+				09EA492B17BE52340026664E /* OGCollectionExtensions */,
 				09EA48FF17BE51B30026664E /* OGCollectionExtensionsProject */,
 				09EA491817BE51B40026664E /* OGCollectionExtensionsProjectTests */,
 				09EA48F817BE51B30026664E /* Frameworks */,
@@ -107,10 +149,10 @@
 		09EA48FF17BE51B30026664E /* OGCollectionExtensionsProject */ = {
 			isa = PBXGroup;
 			children = (
-				09EA490817BE51B30026664E /* OGAppDelegate.h */,
-				09EA490917BE51B30026664E /* OGAppDelegate.m */,
 				09EA490B17BE51B30026664E /* Images.xcassets */,
 				09EA490017BE51B30026664E /* Supporting Files */,
+				09EA490817BE51B30026664E /* OGAppDelegate.h */,
+				09EA490917BE51B30026664E /* OGAppDelegate.m */,
 			);
 			path = OGCollectionExtensionsProject;
 			sourceTree = "<group>";
@@ -142,6 +184,39 @@
 				09EA491B17BE51B40026664E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09EA492B17BE52340026664E /* OGCollectionExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				09EA492C17BE52340026664E /* NSArray+OGCollectionExtensions.h */,
+				09EA492D17BE52340026664E /* NSArray+OGCollectionExtensions.m */,
+				09EA492E17BE52340026664E /* NSDictionary+OGCollectionExtensions.h */,
+				09EA492F17BE52340026664E /* NSDictionary+OGCollectionExtensions.m */,
+				09EA493017BE52340026664E /* NSMutableArray+OGCollectionExtensions.h */,
+				09EA493117BE52340026664E /* NSMutableArray+OGCollectionExtensions.m */,
+				09EA493217BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.h */,
+				09EA493317BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.m */,
+				09EA493417BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.h */,
+				09EA493517BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.m */,
+				09EA493617BE52340026664E /* NSMutableSet+OGCollectionExtensions.h */,
+				09EA493717BE52340026664E /* NSMutableSet+OGCollectionExtensions.m */,
+				09EA493817BE52340026664E /* NSOrderedSet+OGCollectionExtensions.h */,
+				09EA493917BE52340026664E /* NSOrderedSet+OGCollectionExtensions.m */,
+				09EA493A17BE52340026664E /* NSSet+OGCollectionExtensions.h */,
+				09EA493B17BE52340026664E /* NSSet+OGCollectionExtensions.m */,
+				09EA493C17BE52340026664E /* OGCollectionExtensionsConverting.h */,
+				09EA493D17BE52340026664E /* OGCollectionExtensionsFiltering.h */,
+				09EA493E17BE52340026664E /* OGCollectionExtensionsMapping.h */,
+				09EA493F17BE52340026664E /* OGCollectionExtensionsRetrieval.h */,
+				09EA494017BE52340026664E /* OGCollectionExtensionsSafeMutation.h */,
+				09EA494117BE52340026664E /* OGCollectionExtensionsSafeRetrieval.h */,
+				09EA494217BE52340026664E /* OGCollectionExtensions.h */,
+				09EA494E17BE52DD0026664E /* OGCollectionExtensionsCommon.h */,
+				09EA494317BE52340026664E /* OGCollectionExtensionsPrivate.h */,
+				09EA494417BE52340026664E /* OGCollectionExtensionsPrivate.m */,
+			);
+			path = OGCollectionExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +316,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EA490A17BE51B30026664E /* OGAppDelegate.m in Sources */,
+				09EA494D17BE52340026664E /* OGCollectionExtensionsPrivate.m in Sources */,
+				09EA494517BE52340026664E /* NSArray+OGCollectionExtensions.m in Sources */,
+				09EA494617BE52340026664E /* NSDictionary+OGCollectionExtensions.m in Sources */,
+				09EA494C17BE52340026664E /* NSSet+OGCollectionExtensions.m in Sources */,
+				09EA494817BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.m in Sources */,
 				09EA490617BE51B30026664E /* main.m in Sources */,
+				09EA494917BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.m in Sources */,
+				09EA494A17BE52340026664E /* NSMutableSet+OGCollectionExtensions.m in Sources */,
+				09EA494717BE52340026664E /* NSMutableArray+OGCollectionExtensions.m in Sources */,
+				09EA494B17BE52340026664E /* NSOrderedSet+OGCollectionExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
