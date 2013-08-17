@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name                 = "OrangeGroove Collection Extensions"
+  s.name                 = "OGCollectionExtensions"
   s.version              = "0.1.0"
   s.summary              = "Extensions to Foundation collection classes"
   s.homepage             = "https://github.com/OrangeGroove/OGCollectionExtensions"
