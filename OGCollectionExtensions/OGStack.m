@@ -1,5 +1,5 @@
 //
-//  OGCollectionExtensions.h
+//  OGStack.m
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -22,18 +22,67 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-
-#import "OGCollectionExtensionsCommon.h"
-#import "NSArray+OGCollectionExtensions.h"
-#import "NSDictionary+OGCollectionExtensions.h"
-#import "NSMutableArray+OGCollectionExtensions.h"
-#import "NSMutableDictionary+OGCollectionExtensions.h"
-#import "NSMutableOrderedSet+OGCollectionExtensions.h"
-#import "NSMutableSet+OGCollectionExtensions.h"
-#import "NSOrderedSet+OGCollectionExtensions.h"
-#import "NSSet+OGCollectionExtensions.h"
-#import "OGQueue.h"
 #import "OGStack.h"
-#import "OGQueueCollection.h"
-#import "OGStackCollection.h"
+
+@interface OGStack ()
+
+@property (strong, nonatomic) NSMutableArray* stack;
+
+@end
+@implementation OGStack
+
+#pragma mark - Lifecycle
+
+- (id)init
+{
+	if (self = [super init]) {
+		
+	}
+	
+	return self;
+}
+
+#pragma mark - Public
+
+- (void)push:(id)object
+{
+	[self.stack addObject:object];
+}
+
+- (id)peek
+{
+	return _stack.lastObject;
+}
+
+- (id)pop
+{
+	id object = _stack.lastObject;
+	
+	[_stack removeLastObject];
+	
+	return object;
+}
+
+- (void)clear
+{
+	_stack = nil;
+}
+
+- (NSUInteger)count
+{
+	return _stack.count;
+}
+
+#pragma mark - Properties
+
+- (NSMutableArray *)stack
+{
+	if (_stack)
+		return _stack;
+	
+	_stack = [NSMutableArray array];
+	
+	return _stack;
+}
+
+@end

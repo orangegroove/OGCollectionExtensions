@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0970624A17CE08D800C0DAE9 /* OGQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970624317CE08D800C0DAE9 /* OGQueue.m */; };
+		0970624B17CE08D800C0DAE9 /* OGQueueCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970624517CE08D800C0DAE9 /* OGQueueCollection.m */; };
+		0970624C17CE08D800C0DAE9 /* OGStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970624717CE08D800C0DAE9 /* OGStack.m */; };
+		0970624D17CE08D800C0DAE9 /* OGStackCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970624917CE08D800C0DAE9 /* OGStackCollection.m */; };
 		09EA48FA17BE51B30026664E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA48F917BE51B30026664E /* Foundation.framework */; };
 		09EA48FC17BE51B30026664E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA48FB17BE51B30026664E /* CoreGraphics.framework */; };
 		09EA48FE17BE51B30026664E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA48FD17BE51B30026664E /* UIKit.framework */; };
@@ -41,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0970624217CE08D800C0DAE9 /* OGQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGQueue.h; sourceTree = "<group>"; };
+		0970624317CE08D800C0DAE9 /* OGQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGQueue.m; sourceTree = "<group>"; };
+		0970624417CE08D800C0DAE9 /* OGQueueCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGQueueCollection.h; sourceTree = "<group>"; };
+		0970624517CE08D800C0DAE9 /* OGQueueCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGQueueCollection.m; sourceTree = "<group>"; };
+		0970624617CE08D800C0DAE9 /* OGStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGStack.h; sourceTree = "<group>"; };
+		0970624717CE08D800C0DAE9 /* OGStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGStack.m; sourceTree = "<group>"; };
+		0970624817CE08D800C0DAE9 /* OGStackCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGStackCollection.h; sourceTree = "<group>"; };
+		0970624917CE08D800C0DAE9 /* OGStackCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGStackCollection.m; sourceTree = "<group>"; };
 		09EA48F617BE51B30026664E /* OGCollectionExtensionsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGCollectionExtensionsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EA48F917BE51B30026664E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09EA48FB17BE51B30026664E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,6 +227,14 @@
 				09EA494E17BE52DD0026664E /* OGCollectionExtensionsCommon.h */,
 				09EA494317BE52340026664E /* OGCollectionExtensionsPrivate.h */,
 				09EA494417BE52340026664E /* OGCollectionExtensionsPrivate.m */,
+				0970624217CE08D800C0DAE9 /* OGQueue.h */,
+				0970624317CE08D800C0DAE9 /* OGQueue.m */,
+				0970624417CE08D800C0DAE9 /* OGQueueCollection.h */,
+				0970624517CE08D800C0DAE9 /* OGQueueCollection.m */,
+				0970624617CE08D800C0DAE9 /* OGStack.h */,
+				0970624717CE08D800C0DAE9 /* OGStack.m */,
+				0970624817CE08D800C0DAE9 /* OGStackCollection.h */,
+				0970624917CE08D800C0DAE9 /* OGStackCollection.m */,
 			);
 			path = OGCollectionExtensions;
 			sourceTree = "<group>";
@@ -315,9 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0970624D17CE08D800C0DAE9 /* OGStackCollection.m in Sources */,
 				09EA490A17BE51B30026664E /* OGAppDelegate.m in Sources */,
 				09EA494D17BE52340026664E /* OGCollectionExtensionsPrivate.m in Sources */,
 				09EA494517BE52340026664E /* NSArray+OGCollectionExtensions.m in Sources */,
+				0970624B17CE08D800C0DAE9 /* OGQueueCollection.m in Sources */,
+				0970624A17CE08D800C0DAE9 /* OGQueue.m in Sources */,
 				09EA494617BE52340026664E /* NSDictionary+OGCollectionExtensions.m in Sources */,
 				09EA494C17BE52340026664E /* NSSet+OGCollectionExtensions.m in Sources */,
 				09EA494817BE52340026664E /* NSMutableDictionary+OGCollectionExtensions.m in Sources */,
@@ -325,6 +348,7 @@
 				09EA494917BE52340026664E /* NSMutableOrderedSet+OGCollectionExtensions.m in Sources */,
 				09EA494A17BE52340026664E /* NSMutableSet+OGCollectionExtensions.m in Sources */,
 				09EA494717BE52340026664E /* NSMutableArray+OGCollectionExtensions.m in Sources */,
+				0970624C17CE08D800C0DAE9 /* OGStack.m in Sources */,
 				09EA494B17BE52340026664E /* NSOrderedSet+OGCollectionExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +544,7 @@
 				09EA492417BE51B40026664E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09EA492517BE51B40026664E /* Build configuration list for PBXNativeTarget "OGCollectionExtensionsProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +553,7 @@
 				09EA492717BE51B40026664E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

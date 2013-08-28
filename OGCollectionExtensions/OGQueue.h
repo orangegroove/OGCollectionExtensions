@@ -1,5 +1,5 @@
 //
-//  OGCollectionExtensions.h
+//  OGQueue.h
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -24,16 +24,31 @@
 
 #import <Foundation/Foundation.h>
 
-#import "OGCollectionExtensionsCommon.h"
-#import "NSArray+OGCollectionExtensions.h"
-#import "NSDictionary+OGCollectionExtensions.h"
-#import "NSMutableArray+OGCollectionExtensions.h"
-#import "NSMutableDictionary+OGCollectionExtensions.h"
-#import "NSMutableOrderedSet+OGCollectionExtensions.h"
-#import "NSMutableSet+OGCollectionExtensions.h"
-#import "NSOrderedSet+OGCollectionExtensions.h"
-#import "NSSet+OGCollectionExtensions.h"
-#import "OGQueue.h"
-#import "OGStack.h"
-#import "OGQueueCollection.h"
-#import "OGStackCollection.h"
+@interface OGQueue : NSObject
+
+/**
+ 
+ */
+- (void)enqueue:(id)object;
+
+/**
+ 
+ */
+- (id)dequeue;
+
+/**
+ 
+ */
+- (id)peek;
+
+/**
+ 
+ */
+- (NSUInteger)count;
+
+/**
+ 
+ */
+- (void)clear;
+
+@end

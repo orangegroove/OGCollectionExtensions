@@ -1,5 +1,5 @@
 //
-//  OGCollectionExtensions.h
+//  OGQueueCollection.m
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -22,18 +22,75 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-
-#import "OGCollectionExtensionsCommon.h"
-#import "NSArray+OGCollectionExtensions.h"
-#import "NSDictionary+OGCollectionExtensions.h"
-#import "NSMutableArray+OGCollectionExtensions.h"
-#import "NSMutableDictionary+OGCollectionExtensions.h"
-#import "NSMutableOrderedSet+OGCollectionExtensions.h"
-#import "NSMutableSet+OGCollectionExtensions.h"
-#import "NSOrderedSet+OGCollectionExtensions.h"
-#import "NSSet+OGCollectionExtensions.h"
-#import "OGQueue.h"
-#import "OGStack.h"
 #import "OGQueueCollection.h"
-#import "OGStackCollection.h"
+#import "OGQueue.h"
+
+@interface OGQueueCollection ()
+
+@property (strong, nonatomic) NSMutableDictionary* queues;
+
+- (OGQueue *)queueForKey:(id<NSCopying>)key;
+
+@end
+@implementation OGQueueCollection
+
+#pragma mark - Public
+
+- (void)enqueue:(id)object inQueue:(id<NSCopying>)key
+{
+	[[self queueForKey:key] enqueue:object];
+}
+
+- (id)dequeueQueue:(id<NSCopying>)key
+{
+	return [[self queueForKey:key] dequeue];
+}
+
+- (id)peekInQueue:(id<NSCopying>)key
+{
+	return [[self queueForKey:key] peek];
+}
+
+- (NSUInteger)countQueue:(id<NSCopying>)key
+{
+	return [[self queueForKey:key] count];
+}
+
+- (void)clearQueue:(id<NSCopying>)key
+{
+	[_queues removeObjectForKey:key];
+}
+
+- (void)clearAll
+{
+	_queues = nil;
+}
+
+#pragma mark - Private
+
+- (OGQueue *)queueForKey:(id<NSCopying>)key
+{
+	OGQueue* queue = _queues[key];
+	
+	if (!queue) {
+		
+		queue				= [[OGQueue alloc] init];
+		self.queues[key]	= queue;
+	}
+	
+	return queue;
+}
+
+#pragma mark - Properties
+
+- (NSMutableDictionary *)queues
+{
+	if (_queues)
+		return _queues;
+	
+	_queues = [NSMutableDictionary dictionary];
+	
+	return _queues;
+}
+
+@end

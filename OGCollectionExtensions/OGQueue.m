@@ -1,5 +1,5 @@
 //
-//  OGCollectionExtensions.h
+//  OGQueue.m
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -22,18 +22,67 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-
-#import "OGCollectionExtensionsCommon.h"
-#import "NSArray+OGCollectionExtensions.h"
-#import "NSDictionary+OGCollectionExtensions.h"
-#import "NSMutableArray+OGCollectionExtensions.h"
-#import "NSMutableDictionary+OGCollectionExtensions.h"
-#import "NSMutableOrderedSet+OGCollectionExtensions.h"
-#import "NSMutableSet+OGCollectionExtensions.h"
-#import "NSOrderedSet+OGCollectionExtensions.h"
-#import "NSSet+OGCollectionExtensions.h"
 #import "OGQueue.h"
-#import "OGStack.h"
-#import "OGQueueCollection.h"
-#import "OGStackCollection.h"
+
+@interface OGQueue ()
+
+@property (strong, nonatomic) NSMutableArray* queue;
+
+@end
+@implementation OGQueue
+
+#pragma mark - Lifecycle
+
+- (id)init
+{
+	if (self = [super init]) {
+		
+	}
+	
+	return self;
+}
+
+#pragma mark - Public
+
+- (void)enqueue:(id)object
+{
+	[self.queue addObject:object];
+}
+
+- (id)dequeue
+{
+	id object = _queue.firstObject;
+	
+	[_queue removeObjectAtIndex:0];
+	
+	return object;
+}
+
+- (id)peek
+{
+	return _queue.firstObject;
+}
+
+- (NSUInteger)count
+{
+	return _queue.count;
+}
+
+- (void)clear
+{
+	_queue = nil;
+}
+
+#pragma mark - Properties
+
+- (NSMutableArray *)queue
+{
+	if (_queue)
+		return _queue;
+	
+	_queue = [NSMutableArray array];
+	
+	return _queue;
+}
+
+@end

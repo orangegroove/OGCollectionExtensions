@@ -1,5 +1,5 @@
 //
-//  OGCollectionExtensions.h
+//  OGStackCollection.m
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -22,18 +22,75 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-
-#import "OGCollectionExtensionsCommon.h"
-#import "NSArray+OGCollectionExtensions.h"
-#import "NSDictionary+OGCollectionExtensions.h"
-#import "NSMutableArray+OGCollectionExtensions.h"
-#import "NSMutableDictionary+OGCollectionExtensions.h"
-#import "NSMutableOrderedSet+OGCollectionExtensions.h"
-#import "NSMutableSet+OGCollectionExtensions.h"
-#import "NSOrderedSet+OGCollectionExtensions.h"
-#import "NSSet+OGCollectionExtensions.h"
-#import "OGQueue.h"
-#import "OGStack.h"
-#import "OGQueueCollection.h"
 #import "OGStackCollection.h"
+#import "OGStack.h"
+
+@interface OGStackCollection ()
+
+@property (strong, nonatomic) NSMutableDictionary*	stacks;
+
+- (OGStack *)stackForKey:(id<NSCopying>)key;
+
+@end
+@implementation OGStackCollection
+
+#pragma mark - Public
+
+- (void)push:(id)object toStack:(id<NSCopying>)key
+{
+	[[self stackForKey:key] push:object];
+}
+
+- (id)peekInStack:(id<NSCopying>)key
+{
+	return [[self stackForKey:key] peek];
+}
+
+- (id)popStack:(id<NSCopying>)key
+{
+	return [[self stackForKey:key] pop];
+}
+
+- (NSUInteger)countStack:(id<NSCopying>)key
+{
+	return [[self stackForKey:key] count];
+}
+
+- (void)clearStack:(id<NSCopying>)key
+{
+	[_stacks removeObjectForKey:key];
+}
+
+- (void)clearAll
+{
+	_stacks = nil;
+}
+
+#pragma mark - Private
+
+- (OGStack *)stackForKey:(id<NSCopying>)key
+{
+	OGStack* stack = _stacks[key];
+	
+	if (!stack) {
+		
+		stack				= [[OGStack alloc] init];
+		self.stacks[key]	= stack;
+	}
+	
+	return stack;
+}
+
+#pragma mark - Properties
+
+- (NSMutableDictionary *)stacks
+{
+	if (_stacks)
+		return _stacks;
+	
+	_stacks = [NSMutableDictionary dictionary];
+	
+	return _stacks;
+}
+
+@end
