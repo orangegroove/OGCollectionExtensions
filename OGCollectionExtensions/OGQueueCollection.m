@@ -48,12 +48,12 @@
 
 - (id)peekInQueue:(id<NSCopying>)key
 {
-	return [[self queueForKey:key] peek];
+	return [self queueForKey:key].peek;
 }
 
 - (NSUInteger)countQueue:(id<NSCopying>)key
 {
-	return [[self queueForKey:key] count];
+	return [self queueForKey:key].count;
 }
 
 - (void)clearQueue:(id<NSCopying>)key

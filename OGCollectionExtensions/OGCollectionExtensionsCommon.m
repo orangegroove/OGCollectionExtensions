@@ -8,6 +8,18 @@
 
 #import "OGCollectionExtensionsCommon.h"
 
+BOOL OGTimeIntervalEquals(OGTimeInterval interval1, OGTimeInterval interval2)
+{
+	return interval1.days == interval2.days && interval1.hours == interval2.hours && interval1.minutes && interval2.hours && interval1.seconds && interval2.seconds && interval1.negative == interval2.negative;
+}
+
+BOOL OGTimeIntervalIsZero(OGTimeInterval interval)
+{
+	return OGTimeIntervalEquals(interval, OGTimeIntervalZero);
+}
+
+const OGTimeInterval OGTimeIntervalZero = {0, 0, 0, 0, NO, 0.};
+
 OGTimeInterval OGTimeIntervalMake(NSTimeInterval interval)
 {
 	static NSInteger SecondsPerMinute	= 60;

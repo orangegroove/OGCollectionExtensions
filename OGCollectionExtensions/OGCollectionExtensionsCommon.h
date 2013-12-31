@@ -42,7 +42,23 @@ typedef struct
 
 /**
  
+ */
+BOOL OGTimeIntervalEquals(OGTimeInterval interval1, OGTimeInterval interval2);
+
+/**
+ 
+ */
+BOOL OGTimeIntervalIsZero(OGTimeInterval interval);
+
+/**
+ 
+ */
+const OGTimeInterval OGTimeIntervalZero;
+
+/**
+ 
  @param interval
  @return
  */
 OGTimeInterval	OGTimeIntervalMake(NSTimeInterval interval);
+

@@ -43,7 +43,7 @@
 
 - (id)peekInStack:(id<NSCopying>)key
 {
-	return [[self stackForKey:key] peek];
+	return [self stackForKey:key].peek;
 }
 
 - (id)popStack:(id<NSCopying>)key
@@ -53,7 +53,7 @@
 
 - (NSUInteger)countStack:(id<NSCopying>)key
 {
-	return [[self stackForKey:key] count];
+	return [self stackForKey:key].count;
 }
 
 - (void)clearStack:(id<NSCopying>)key
