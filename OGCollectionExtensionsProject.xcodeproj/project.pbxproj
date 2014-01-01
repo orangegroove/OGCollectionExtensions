@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		093DA27017D0CA5E00F2AD65 /* OGCollectionExtensionsCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA26F17D0CA5E00F2AD65 /* OGCollectionExtensionsCommon.m */; };
+		0912EDC61874272300E32C5C /* OGTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 0912EDC51874272300E32C5C /* OGTimeInterval.m */; };
 		0970624A17CE08D800C0DAE9 /* OGQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970624317CE08D800C0DAE9 /* OGQueue.m */; };
 		0970624B17CE08D800C0DAE9 /* OGQueueCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970624517CE08D800C0DAE9 /* OGQueueCollection.m */; };
 		0970624C17CE08D800C0DAE9 /* OGStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970624717CE08D800C0DAE9 /* OGStack.m */; };
@@ -46,7 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		093DA26F17D0CA5E00F2AD65 /* OGCollectionExtensionsCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGCollectionExtensionsCommon.m; sourceTree = "<group>"; };
+		0912EDC41874272300E32C5C /* OGTimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGTimeInterval.h; sourceTree = "<group>"; };
+		0912EDC51874272300E32C5C /* OGTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGTimeInterval.m; sourceTree = "<group>"; };
 		0970624217CE08D800C0DAE9 /* OGQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGQueue.h; sourceTree = "<group>"; };
 		0970624317CE08D800C0DAE9 /* OGQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGQueue.m; sourceTree = "<group>"; };
 		0970624417CE08D800C0DAE9 /* OGQueueCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGQueueCollection.h; sourceTree = "<group>"; };
@@ -227,9 +228,10 @@
 				09EA494117BE52340026664E /* OGCollectionExtensionsSafeRetrieval.h */,
 				09EA494217BE52340026664E /* OGCollectionExtensions.h */,
 				09EA494E17BE52DD0026664E /* OGCollectionExtensionsCommon.h */,
-				093DA26F17D0CA5E00F2AD65 /* OGCollectionExtensionsCommon.m */,
 				09EA494317BE52340026664E /* OGCollectionExtensionsPrivate.h */,
 				09EA494417BE52340026664E /* OGCollectionExtensionsPrivate.m */,
+				0912EDC41874272300E32C5C /* OGTimeInterval.h */,
+				0912EDC51874272300E32C5C /* OGTimeInterval.m */,
 				0970624217CE08D800C0DAE9 /* OGQueue.h */,
 				0970624317CE08D800C0DAE9 /* OGQueue.m */,
 				0970624417CE08D800C0DAE9 /* OGQueueCollection.h */,
@@ -341,8 +343,8 @@
 				0970624D17CE08D800C0DAE9 /* OGStackCollection.m in Sources */,
 				09EA490A17BE51B30026664E /* OGAppDelegate.m in Sources */,
 				09EA494D17BE52340026664E /* OGCollectionExtensionsPrivate.m in Sources */,
+				0912EDC61874272300E32C5C /* OGTimeInterval.m in Sources */,
 				09EA494517BE52340026664E /* NSArray+OGCollectionExtensions.m in Sources */,
-				093DA27017D0CA5E00F2AD65 /* OGCollectionExtensionsCommon.m in Sources */,
 				0970624B17CE08D800C0DAE9 /* OGQueueCollection.m in Sources */,
 				0970624A17CE08D800C0DAE9 /* OGQueue.m in Sources */,
 				09EA494617BE52340026664E /* NSDictionary+OGCollectionExtensions.m in Sources */,

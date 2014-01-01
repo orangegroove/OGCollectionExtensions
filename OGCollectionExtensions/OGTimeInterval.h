@@ -1,5 +1,5 @@
 //
-//  OGCollectionExtensions.h
+//  OGTimeInterval.h
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -24,17 +24,35 @@
 
 #import <Foundation/Foundation.h>
 
-#import "OGCollectionExtensionsCommon.h"
-#import "NSArray+OGCollectionExtensions.h"
-#import "NSDictionary+OGCollectionExtensions.h"
-#import "NSMutableArray+OGCollectionExtensions.h"
-#import "NSMutableDictionary+OGCollectionExtensions.h"
-#import "NSMutableOrderedSet+OGCollectionExtensions.h"
-#import "NSMutableSet+OGCollectionExtensions.h"
-#import "NSOrderedSet+OGCollectionExtensions.h"
-#import "NSSet+OGCollectionExtensions.h"
-#import "OGTimeInterval.h"
-#import "OGQueue.h"
-#import "OGStack.h"
-#import "OGQueueCollection.h"
-#import "OGStackCollection.h"
+typedef struct
+{
+	BOOL			negative;
+	NSInteger		days;
+	NSInteger		hours;
+	NSInteger		minutes;
+	NSInteger		seconds;
+	NSTimeInterval	total;
+	
+} OGTimeInterval;
+
+/**
+ 
+ */
+BOOL OGTimeIntervalEquals(OGTimeInterval interval1, OGTimeInterval interval2);
+
+/**
+ 
+ */
+BOOL OGTimeIntervalIsZero(OGTimeInterval interval);
+
+/**
+ 
+ */
+const OGTimeInterval OGTimeIntervalZero;
+
+/**
+ 
+ @param interval
+ @return
+ */
+OGTimeInterval OGTimeIntervalMake(NSTimeInterval interval);

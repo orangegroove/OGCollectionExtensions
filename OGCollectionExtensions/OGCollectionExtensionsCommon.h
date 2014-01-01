@@ -29,36 +29,3 @@ typedef void	(^OGCollectionExtensionsSuccessBlock)(BOOL success);
 typedef id		(^OGCollectionExtensionsObjectMapBlock)(id object);
 typedef BOOL	(^OGCollectionExtensionsObjectMatchBlock)(id object);
 typedef BOOL	(^OGCollectionExtensionsObjectsMatchBlock)(id object, BOOL* stop);
-typedef struct
-{
-	BOOL			negative;
-	NSInteger		days;
-	NSInteger		hours;
-	NSInteger		minutes;
-	NSInteger		seconds;
-	NSTimeInterval	total;
-	
-} OGTimeInterval;
-
-/**
- 
- */
-BOOL OGTimeIntervalEquals(OGTimeInterval interval1, OGTimeInterval interval2);
-
-/**
- 
- */
-BOOL OGTimeIntervalIsZero(OGTimeInterval interval);
-
-/**
- 
- */
-const OGTimeInterval OGTimeIntervalZero;
-
-/**
- 
- @param interval
- @return
- */
-OGTimeInterval	OGTimeIntervalMake(NSTimeInterval interval);
-
