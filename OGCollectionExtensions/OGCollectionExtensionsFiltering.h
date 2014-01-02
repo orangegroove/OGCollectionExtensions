@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Orange Groove. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "OGCollectionExtensionsCommon.h"
 
 @protocol OGCollectionExtensionsFiltering <NSObject>

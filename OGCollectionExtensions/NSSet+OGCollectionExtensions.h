@@ -22,7 +22,7 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "OGCollectionExtensionsCommon.h"
 #import "OGCollectionExtensionsConverting.h"
 #import "OGCollectionExtensionsMapping.h"

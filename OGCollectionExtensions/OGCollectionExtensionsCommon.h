@@ -22,7 +22,7 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 typedef void	(^OGCollectionExtensionsVoidBlock)(void);
 typedef void	(^OGCollectionExtensionsSuccessBlock)(BOOL success);

@@ -22,7 +22,7 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "OGCollectionExtensionsCommon.h"
 
 void _ogceNoExceptionAddObjectToCollection(id mutableCollection, id object);
