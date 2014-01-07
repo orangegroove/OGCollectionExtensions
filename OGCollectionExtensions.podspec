@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                 = "OGCollectionExtensions"
-  s.version              = "0.1.1"
+  s.version              = "0.1.2"
   s.summary              = "Extensions to Foundation collection classes"
   s.homepage             = "https://github.com/OrangeGroove/OGCollectionExtensions"
   s.license              = { :type => "MIT" }
