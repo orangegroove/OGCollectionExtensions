@@ -25,8 +25,10 @@
 @import Foundation;
 #import "OGCollectionExtensionsCommon.h"
 #import "OGCollectionExtensionsSafeMutation.h"
+#import "OGCollectionExtensionsOrdering.h"
 
 @interface NSMutableArray (OGCollectionExtensions)
-<OGCollectionExtensionsIndexedSafeMutation>
+<OGCollectionExtensionsIndexedSafeMutation,
+ OGCollectionExtensionsOrdering>
 
 @end

@@ -33,3 +33,4 @@ id _ogceRandomCollectionObject(id collection);
 id _ogceMatchingCollectionObject(id<NSFastEnumeration> collection, OGCollectionExtensionsObjectMatchBlock matchingBlock);
 id _ogceMappedCollection(id<NSFastEnumeration>collection, id mutableTargetCollection, OGCollectionExtensionsObjectMapBlock mappingBlock);
 id _ogceFilteredCollection(id<NSFastEnumeration>collection, id mutableTargetCollection, OGCollectionExtensionsObjectsMatchBlock matchingBlock);
+void _ogceRandomizeCollection(id collection);

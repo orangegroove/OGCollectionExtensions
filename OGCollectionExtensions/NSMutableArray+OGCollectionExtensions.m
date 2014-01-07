@@ -44,4 +44,11 @@
 	_ogceNoExceptionReplaceObjectInCollection(self, anObject, index);
 }
 
+#pragma mark - OGCollectionExtensionsOrdering
+
+- (void)randomize
+{
+	_ogceRandomizeCollection(self);
+}
+
 @end

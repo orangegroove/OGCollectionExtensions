@@ -84,3 +84,17 @@ id _ogceFilteredCollection(id<NSFastEnumeration>collection, id mutableTargetColl
 	
 	return mutableTargetCollection;
 }
+
+void _ogceRandomizeCollection(id collection)
+{
+	NSUInteger count = [collection count];
+	
+	NSLog(@"c %d", count);
+	
+	for (NSUInteger i = 0; i < count-1; i++) {
+		
+		NSUInteger n = arc4random_uniform(count-i)+i;
+		NSLog(@"%d %d", i, n);
+		[collection exchangeObjectAtIndex:i withObjectAtIndex:n];
+	}
+}

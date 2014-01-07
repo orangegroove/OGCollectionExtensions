@@ -56,6 +56,7 @@
 		0970624717CE08D800C0DAE9 /* OGStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGStack.m; sourceTree = "<group>"; };
 		0970624817CE08D800C0DAE9 /* OGStackCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGStackCollection.h; sourceTree = "<group>"; };
 		0970624917CE08D800C0DAE9 /* OGStackCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGStackCollection.m; sourceTree = "<group>"; };
+		09883675187C8A0E009BB5E2 /* OGCollectionExtensionsOrdering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGCollectionExtensionsOrdering.h; sourceTree = "<group>"; };
 		09EA48F617BE51B30026664E /* OGCollectionExtensionsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGCollectionExtensionsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EA48F917BE51B30026664E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09EA48FB17BE51B30026664E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -224,6 +225,7 @@
 				09EA493D17BE52340026664E /* OGCollectionExtensionsFiltering.h */,
 				09EA493E17BE52340026664E /* OGCollectionExtensionsMapping.h */,
 				09EA493F17BE52340026664E /* OGCollectionExtensionsRetrieval.h */,
+				09883675187C8A0E009BB5E2 /* OGCollectionExtensionsOrdering.h */,
 				09EA494017BE52340026664E /* OGCollectionExtensionsSafeMutation.h */,
 				09EA494117BE52340026664E /* OGCollectionExtensionsSafeRetrieval.h */,
 				09EA494217BE52340026664E /* OGCollectionExtensions.h */,
