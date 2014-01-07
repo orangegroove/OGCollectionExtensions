@@ -26,6 +26,9 @@
 
 @protocol OGCollectionExtensionsOrdering <NSObject>
 
+/**
+ Randomizes the objects in the collection.
+ */
 - (void)randomize;
 
 @end
