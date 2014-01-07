@@ -25,8 +25,10 @@
 @import Foundation;
 #import "OGCollectionExtensionsCommon.h"
 #import "OGCollectionExtensionsSafeRetrieval.h"
+#import "OGCollectionExtensionsFiltering.h"
 
 @interface NSDictionary (OGCollectionExtensions)
-<OGCollectionExtensionsKeyedSafeRetrieval>
+<OGCollectionExtensionsKeyedSafeRetrieval,
+ OGCollectionExtensionsKeyFiltering>
 
 @end

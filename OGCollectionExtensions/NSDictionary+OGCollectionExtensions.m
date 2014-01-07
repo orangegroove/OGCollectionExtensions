@@ -37,4 +37,19 @@
 	return self[aKey];
 }
 
+#pragma mark - OGCollectionExtensionsKeyFiltering
+
+- (instancetype)dictionaryWithKeysAndValuesMatching:(OGCollectionExtensionsKeyedMatchBlock)block
+{
+	NSArray* keys = [self keysOfEntriesWithOptions:0 passingTest:^BOOL(id key, id obj, BOOL *stop) {
+		
+		return block(key, obj, stop);
+		
+	}].allObjects;
+	
+	NSArray* objects = [self objectsForKeys:keys notFoundMarker:NSNull.null];
+	
+	return [self.class dictionaryWithObjects:objects forKeys:keys];
+}
+
 @end

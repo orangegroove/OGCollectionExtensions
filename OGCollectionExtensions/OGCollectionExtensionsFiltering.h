@@ -35,3 +35,14 @@
 - (instancetype)objectsMatching:(OGCollectionExtensionsObjectsMatchBlock)block;
 
 @end
+
+@protocol OGCollectionExtensionsKeyFiltering <NSObject>
+
+/**
+ Returns a collection with matching keys and values.
+ @param The matching block
+ @return The new collection
+ */
+- (instancetype)dictionaryWithKeysAndValuesMatching:(OGCollectionExtensionsKeyedMatchBlock)block;
+
+@end

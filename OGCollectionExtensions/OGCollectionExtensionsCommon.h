@@ -29,3 +29,4 @@ typedef void	(^OGCollectionExtensionsSuccessBlock)(BOOL success);
 typedef id		(^OGCollectionExtensionsObjectMapBlock)(id object);
 typedef BOOL	(^OGCollectionExtensionsObjectMatchBlock)(id object);
 typedef BOOL	(^OGCollectionExtensionsObjectsMatchBlock)(id object, BOOL* stop);
+typedef BOOL	(^OGCollectionExtensionsKeyedMatchBlock)(id<NSCopying> key, id value, BOOL* stop);
