@@ -44,7 +44,7 @@ void _ogceNoExceptionReplaceObjectInCollection(id mutableCollection, id object, 
 
 id _ogceRandomCollectionObject(id collection)
 {
-	NSUInteger count = ((NSArray *)collection).count;
+	uint32_t count = (uint32_t)((NSArray *)collection).count;
 	
 	if (!count)
 		return nil;
@@ -87,14 +87,11 @@ id _ogceFilteredCollection(id<NSFastEnumeration>collection, id mutableTargetColl
 
 void _ogceRandomizeCollection(id collection)
 {
-	NSUInteger count = [collection count];
+	NSInteger count = [collection count];
 	
-	NSLog(@"c %d", count);
-	
-	for (NSUInteger i = 0; i < count-1; i++) {
+	for (uint32_t i = 0; i < count-1; i++) {
 		
-		NSUInteger n = arc4random_uniform(count-i)+i;
-		NSLog(@"%d %d", i, n);
+		uint32_t n = arc4random_uniform((uint32_t)count-i)+i;
 		[collection exchangeObjectAtIndex:i withObjectAtIndex:n];
 	}
 }
