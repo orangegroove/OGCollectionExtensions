@@ -31,6 +31,7 @@ typedef struct
 	NSInteger		hours;
 	NSInteger		minutes;
 	NSInteger		seconds;
+	NSInteger		milliSeconds;
 	NSTimeInterval	total;
 	
 } OGTimeInterval;

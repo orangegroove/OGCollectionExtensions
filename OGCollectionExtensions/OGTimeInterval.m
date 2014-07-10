@@ -28,7 +28,7 @@ const OGTimeInterval OGTimeIntervalZero = {0, 0, 0, 0, NO, 0.};
 
 BOOL OGTimeIntervalEquals(OGTimeInterval interval1, OGTimeInterval interval2)
 {
-	return interval1.days == interval2.days && interval1.hours == interval2.hours && interval1.minutes && interval2.hours && interval1.seconds && interval2.seconds && interval1.negative == interval2.negative;
+	return interval1.days == interval2.days && interval1.hours == interval2.hours && interval1.minutes && interval2.hours && interval1.seconds && interval2.seconds && interval1.milliSeconds == interval2.milliSeconds && interval1.negative == interval2.negative;
 }
 
 BOOL OGTimeIntervalIsZero(OGTimeInterval interval)
@@ -44,6 +44,7 @@ OGTimeInterval OGTimeIntervalMake(NSTimeInterval interval)
 	
 	OGTimeInterval ogInterval;
 	NSInteger time						= (NSInteger)fabs(interval);
+	NSInteger milliSeconds				= (NSInteger)round(((interval - time) * 1000));
 	ogInterval.days						= time / SecondsPerDay;
 	time							   -= ogInterval.days * SecondsPerDay;
 	ogInterval.hours					= time / SecondsPerHour;
@@ -51,6 +52,7 @@ OGTimeInterval OGTimeIntervalMake(NSTimeInterval interval)
 	ogInterval.minutes					= time / SecondsPerMinute;
 	time							   -= ogInterval.minutes * SecondsPerMinute;
 	ogInterval.seconds					= time;
+	ogInterval.milliSeconds				= milliSeconds;
 	ogInterval.negative					= interval < 0.;
 	ogInterval.total					= interval;
 	
