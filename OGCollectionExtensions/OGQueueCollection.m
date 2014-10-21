@@ -29,10 +29,22 @@
 
 @property (strong, nonatomic) NSMutableDictionary* queues;
 
-- (OGQueue *)queueForKey:(id<NSCopying>)key;
-
 @end
 @implementation OGQueueCollection
+
+#pragma mark - Lifecycle
+
+- (instancetype)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        _queues = [NSMutableDictionary dictionary];
+    }
+    
+    return self;
+}
 
 #pragma mark - Public
 
@@ -58,39 +70,27 @@
 
 - (void)clearQueue:(id<NSCopying>)key
 {
-	[_queues removeObjectForKey:key];
+	[self.queues removeObjectForKey:key];
 }
 
 - (void)clearAll
 {
-	_queues = nil;
+	[self.queues removeAllObjects];
 }
 
 #pragma mark - Private
 
 - (OGQueue *)queueForKey:(id<NSCopying>)key
 {
-	OGQueue* queue = _queues[key];
+	OGQueue* queue = self.queues[key];
 	
-	if (!queue) {
-		
-		queue				= [[OGQueue alloc] init];
-		self.queues[key]	= queue;
+	if (!queue)
+    {
+        queue            = [[OGQueue alloc] init];
+        self.queues[key] = queue;
 	}
 	
 	return queue;
-}
-
-#pragma mark - Properties
-
-- (NSMutableDictionary *)queues
-{
-	if (_queues)
-		return _queues;
-	
-	_queues = [NSMutableDictionary dictionary];
-	
-	return _queues;
 }
 
 @end

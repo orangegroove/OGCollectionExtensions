@@ -31,7 +31,7 @@
  Alias for addObject: that doesn't throw exceptions on nil parameters.
  @param anObject The object to add
  */
-- (void)addObjectSafely:(id)anObject;
+- (void)og_addObjectSafely:(id)anObject;
 
 @end
 
@@ -42,14 +42,14 @@
  @param anObject The object to insert
  @param index The target index
  */
-- (void)insertObjectSafely:(id)anObject atIndex:(NSUInteger)index;
+- (void)og_insertObjectSafely:(id)anObject atIndex:(NSUInteger)index;
 
 /**
  Alias for replaceObjectAtIndex:withObject: that doesn't throw exceptions on nil parameters.
  @param index The target index
  @param anObject The object to insert
  */
-- (void)replaceObjectSafelyAtIndex:(NSUInteger)index withObject:(id)anObject;
+- (void)og_replaceObjectSafelyAtIndex:(NSUInteger)index withObject:(id)anObject;
 
 @end
 
@@ -60,13 +60,13 @@
  @param anObject The object to set. If nil, the key is removed from the dictionary.
  @param aKey The key
  */
-- (void)setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey;
+- (void)og_setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey;
 
 /**
  Renames a key but the preserves the object
  @param key The old key
  @param newKey The new key
  */
-- (void)renameKey:(id<NSCopying>)key toKey:(id<NSCopying>)newKey;
+- (void)og_renameKey:(id<NSCopying>)key toKey:(id<NSCopying>)newKey;
 
 @end

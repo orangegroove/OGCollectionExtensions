@@ -29,10 +29,22 @@
 
 @property (strong, nonatomic) NSMutableDictionary*	stacks;
 
-- (OGStack *)stackForKey:(id<NSCopying>)key;
-
 @end
 @implementation OGStackCollection
+
+#pragma mark - Lifecycle
+
+- (instancetype)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        _stacks = [NSMutableDictionary dictionary];
+    }
+    
+    return self;
+}
 
 #pragma mark - Public
 
@@ -58,39 +70,27 @@
 
 - (void)clearStack:(id<NSCopying>)key
 {
-	[_stacks removeObjectForKey:key];
+	[self.stacks removeObjectForKey:key];
 }
 
 - (void)clearAll
 {
-	_stacks = nil;
+	[self.stacks removeAllObjects];
 }
 
 #pragma mark - Private
 
 - (OGStack *)stackForKey:(id<NSCopying>)key
 {
-	OGStack* stack = _stacks[key];
+	OGStack* stack = self.stacks[key];
 	
-	if (!stack) {
-		
-		stack				= [[OGStack alloc] init];
-		self.stacks[key]	= stack;
+	if (!stack)
+    {
+        stack            = [[OGStack alloc] init];
+        self.stacks[key] = stack;
 	}
 	
 	return stack;
-}
-
-#pragma mark - Properties
-
-- (NSMutableDictionary *)stacks
-{
-	if (_stacks)
-		return _stacks;
-	
-	_stacks = [NSMutableDictionary dictionary];
-	
-	return _stacks;
 }
 
 @end

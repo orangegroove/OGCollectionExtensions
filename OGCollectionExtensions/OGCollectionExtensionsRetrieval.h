@@ -31,13 +31,13 @@
  Returns a random object in the collection.
  @return The object.
  */
-- (id)randomObject;
+- (id)og_randomObject;
 
 /**
  Returns the first matched object.
  @param block The predicate
  @return The matched object
  */
-- (id)objectMatching:(OGCollectionExtensionsObjectMatchBlock)block;
+- (id)og_objectMatching:(BOOL (^)(id object, BOOL* stop))block;
 
 @end

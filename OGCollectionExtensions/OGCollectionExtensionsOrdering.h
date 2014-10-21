@@ -29,6 +29,6 @@
 /**
  Randomizes the objects in the collection.
  */
-- (void)randomize;
+- (void)og_randomize;
 
 @end

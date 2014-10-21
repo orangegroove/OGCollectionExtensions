@@ -29,17 +29,16 @@
 
 #pragma mark - OGCollectionExtensionsKeyedSafeRetrieval
 
-- (id)objectSafelyForKey:(id)aKey
+- (id)og_objectSafelyForKey:(id)aKey
 {
-	if (!aKey)
-		return nil;
+	if (!aKey) return nil;
 	
 	return self[aKey];
 }
 
 #pragma mark - OGCollectionExtensionsKeyFiltering
 
-- (instancetype)dictionaryWithKeysAndValuesMatching:(OGCollectionExtensionsKeyedMatchBlock)block
+- (instancetype)og_dictionaryWithKeysAndValuesMatching:(OGCollectionExtensionsKeyedMatchBlock)block
 {
 	NSArray* keys = [self keysOfEntriesWithOptions:0 passingTest:^BOOL(id key, id obj, BOOL *stop) {
 		

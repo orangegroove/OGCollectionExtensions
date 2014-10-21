@@ -29,24 +29,24 @@
 
 #pragma mark - OGCollectionExtensionsIndexedSafeMutation
 
-- (void)addObjectSafely:(id)anObject
+- (void)og_addObjectSafely:(id)anObject
 {
 	_ogceNoExceptionAddObjectToCollection(self, anObject);
 }
 
-- (void)insertObjectSafely:(id)anObject atIndex:(NSUInteger)index
+- (void)og_insertObjectSafely:(id)anObject atIndex:(NSUInteger)index
 {
 	_ogceNoExceptionInsertObjectInCollection(self, anObject, index);
 }
 
-- (void)replaceObjectSafelyAtIndex:(NSUInteger)index withObject:(id)anObject
+- (void)og_replaceObjectSafelyAtIndex:(NSUInteger)index withObject:(id)anObject
 {
 	_ogceNoExceptionReplaceObjectInCollection(self, anObject, index);
 }
 
 #pragma mark - OGCollectionExtensionsOrdering
 
-- (void)randomize
+- (void)og_randomize
 {
 	_ogceRandomizeCollection(self);
 }

@@ -29,83 +29,83 @@
 
 #pragma mark - OGCollectionExtensionsFiltering
 
-- (instancetype)objectsMatching:(OGCollectionExtensionsObjectsMatchBlock)block
+- (instancetype)og_objectsMatching:(OGCollectionExtensionsObjectsMatchBlock)block
 {
 	return [self.class setWithSet:_ogceFilteredCollection(self, [NSMutableSet set], block)];
 }
 
 #pragma mark - OGCollectionExtensionsRetrieval
 
-- (id)randomObject
+- (id)og_randomObject
 {
-	return _ogceRandomCollectionObject(self.array);
+	return _ogceRandomCollectionObject(self.og_array);
 }
 
-- (id)objectMatching:(OGCollectionExtensionsObjectMatchBlock)block
+- (id)og_objectMatching:(OGCollectionExtensionsObjectMatchBlock)block
 {
 	return _ogceMatchingCollectionObject(self, block);
 }
 
 #pragma mark - OGCollectionExtensionsMapping
 
-- (NSArray *)mapToArray:(OGCollectionExtensionsObjectMapBlock)block
+- (NSArray *)og_mapToArray:(OGCollectionExtensionsObjectMapBlock)block
 {
 	return [NSArray arrayWithArray:_ogceMappedCollection(self, [NSMutableArray array], block)];
 }
 
-- (NSMutableArray *)mapToMutableArray:(OGCollectionExtensionsObjectMapBlock)block
+- (NSMutableArray *)og_mapToMutableArray:(OGCollectionExtensionsObjectMapBlock)block
 {
 	return _ogceMappedCollection(self, [NSMutableArray array], block);
 }
 
-- (NSSet *)mapToSet:(OGCollectionExtensionsObjectMapBlock)block
+- (NSSet *)og_mapToSet:(OGCollectionExtensionsObjectMapBlock)block
 {
 	return [NSSet setWithSet:_ogceMappedCollection(self, [NSMutableSet set], block)];
 }
 
-- (NSMutableSet *)mapToMutableSet:(OGCollectionExtensionsObjectMapBlock)block
+- (NSMutableSet *)og_mapToMutableSet:(OGCollectionExtensionsObjectMapBlock)block
 {
 	return _ogceMappedCollection(self, [NSMutableSet set], block);
 }
 
-- (NSOrderedSet *)mapToOrderedSet:(OGCollectionExtensionsObjectMapBlock)block
+- (NSOrderedSet *)og_mapToOrderedSet:(OGCollectionExtensionsObjectMapBlock)block
 {
 	return [NSOrderedSet orderedSetWithOrderedSet:_ogceMappedCollection(self, [NSMutableOrderedSet orderedSet], block)];
 }
 
-- (NSMutableOrderedSet *)mapToMutableOrderedSet:(OGCollectionExtensionsObjectMapBlock)block
+- (NSMutableOrderedSet *)og_mapToMutableOrderedSet:(OGCollectionExtensionsObjectMapBlock)block
 {
 	return _ogceMappedCollection(self, [NSMutableOrderedSet orderedSet], block);
 }
 
 #pragma mark - OGCollectionExtensionsConverting
 
-- (NSArray *)array
+- (NSArray *)og_array
 {
 	return self.allObjects;
 }
 
-- (NSMutableArray *)mutableArray
+- (NSMutableArray *)og_mutableArray
 {
 	return [NSMutableArray arrayWithArray:self.allObjects];
 }
 
-- (NSSet *)set
+- (NSSet *)og_set
 {
 	return [NSSet setWithSet:self];
 }
 
-- (NSMutableSet *)mutableSet
+- (NSMutableSet *)og_mutableSet
 {
 	return [NSMutableSet setWithSet:self];
 }
 
-- (NSOrderedSet *)orderedSet
+- (NSOrderedSet *)og_orderedSet
 {
 	return [NSOrderedSet orderedSetWithSet:self];
 }
 
-- (NSMutableOrderedSet *)mutableOrderedSet
+- (NSMutableOrderedSet *)og_mutableOrderedSet
 {
 	return [NSMutableOrderedSet orderedSetWithSet:self];
 }

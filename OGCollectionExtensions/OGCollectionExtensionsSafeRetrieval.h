@@ -32,7 +32,7 @@
  @param index The index of object
  @return The object or nil
  */
-- (id)objectSafelyAtIndex:(NSUInteger)index;
+- (id)og_objectSafelyAtIndex:(NSUInteger)index;
 
 @end
 
@@ -43,6 +43,6 @@
  @param aKey The key, may be nil
  @return The object or nil
  */
-- (id)objectSafelyForKey:(id)aKey;
+- (id)og_objectSafelyForKey:(id)aKey;
 
 @end

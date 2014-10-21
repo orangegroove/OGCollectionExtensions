@@ -32,7 +32,7 @@
  @param The matching block
  @return The new collection
  */
-- (instancetype)objectsMatching:(OGCollectionExtensionsObjectsMatchBlock)block;
+- (instancetype)og_objectsMatching:(BOOL (^)(id object, BOOL* stop))block;
 
 @end
 
@@ -43,6 +43,6 @@
  @param The matching block
  @return The new collection
  */
-- (instancetype)dictionaryWithKeysAndValuesMatching:(OGCollectionExtensionsKeyedMatchBlock)block;
+- (instancetype)og_dictionaryWithKeysAndValuesMatching:(OGCollectionExtensionsKeyedMatchBlock)block;
 
 @end

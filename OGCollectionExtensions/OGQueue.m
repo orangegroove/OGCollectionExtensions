@@ -35,8 +35,11 @@
 
 - (id)init
 {
-	if (self = [super init]) {
-		
+    self = [super init];
+    
+	if (self)
+    {
+        _queue = [NSMutableArray array];
 	}
 	
 	return self;
@@ -51,38 +54,29 @@
 
 - (id)dequeue
 {
-	id object = _queue.firstObject;
+	id object = self.queue.firstObject;
 	
-	[_queue removeObjectAtIndex:0];
+    if (self.queue.count)
+    {
+        [self.queue removeObjectAtIndex:0];
+    }
 	
 	return object;
 }
 
 - (id)peek
 {
-	return _queue.firstObject;
+	return self.queue.firstObject;
 }
 
 - (NSUInteger)count
 {
-	return _queue.count;
+	return self.queue.count;
 }
 
 - (void)clear
 {
-	_queue = nil;
-}
-
-#pragma mark - Properties
-
-- (NSMutableArray *)queue
-{
-	if (_queue)
-		return _queue;
-	
-	_queue = [NSMutableArray array];
-	
-	return _queue;
+    [self.queue removeAllObjects];
 }
 
 @end

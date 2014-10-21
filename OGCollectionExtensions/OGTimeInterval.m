@@ -38,23 +38,23 @@ BOOL OGTimeIntervalIsZero(OGTimeInterval interval)
 
 OGTimeInterval OGTimeIntervalMake(NSTimeInterval interval)
 {
-	static NSInteger SecondsPerMinute	= 60;
-	static NSInteger SecondsPerHour		= 3600;
-	static NSInteger SecondsPerDay		= 86400;
-	
+    static NSInteger SecondsPerMinute = 60;
+    static NSInteger SecondsPerHour   = 3600;
+    static NSInteger SecondsPerDay    = 86400;
+
 	OGTimeInterval ogInterval;
-	NSInteger time						= (NSInteger)fabs(interval);
-	NSInteger milliSeconds				= (NSInteger)round(((interval - time) * 1000));
-	ogInterval.days						= time / SecondsPerDay;
-	time							   -= ogInterval.days * SecondsPerDay;
-	ogInterval.hours					= time / SecondsPerHour;
-	time							   -= ogInterval.hours * SecondsPerHour;
-	ogInterval.minutes					= time / SecondsPerMinute;
-	time							   -= ogInterval.minutes * SecondsPerMinute;
-	ogInterval.seconds					= time;
-	ogInterval.milliSeconds				= milliSeconds;
-	ogInterval.negative					= interval < 0.;
-	ogInterval.total					= interval;
+    NSInteger time                    = (NSInteger)fabs(interval);
+    NSInteger milliSeconds            = (NSInteger)round(((interval - time) * 1000));
+    ogInterval.days                   = time / SecondsPerDay;
+    time                             -= ogInterval.days * SecondsPerDay;
+    ogInterval.hours                  = time / SecondsPerHour;
+    time                             -= ogInterval.hours * SecondsPerHour;
+    ogInterval.minutes                = time / SecondsPerMinute;
+    time                             -= ogInterval.minutes * SecondsPerMinute;
+    ogInterval.seconds                = time;
+    ogInterval.milliSeconds           = milliSeconds;
+    ogInterval.negative               = interval < 0.;
+    ogInterval.total                  = interval;
 	
 	return ogInterval;
 }

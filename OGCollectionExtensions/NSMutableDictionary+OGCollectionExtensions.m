@@ -27,26 +27,28 @@
 
 @implementation NSMutableDictionary (OGCollectionExtensions)
 
-- (void)setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey
+- (void)og_setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey
 {
-	if (!aKey)
-		return;
+	if (!aKey) return;
 	
 	if (anObject)
+    {
 		self[aKey] = anObject;
+    }
 	else
+    {
 		[self removeObjectForKey:aKey];
+    }
 }
 
-- (void)renameKey:(id<NSCopying>)key toKey:(id<NSCopying>)newKey
+- (void)og_renameKey:(id<NSCopying>)key toKey:(id<NSCopying>)newKey
 {
-	if (!key || !newKey)
-		return;
+	if (!key || !newKey) return;
 	
 	id object = self[key];
 	
-	if (object) {
-		
+	if (object)
+    {
 		[self removeObjectForKey:key];
 		[self setObject:object forKey:newKey];
 	}

@@ -35,8 +35,11 @@
 
 - (id)init
 {
-	if (self = [super init]) {
-		
+    self = [super init];
+    
+	if (self)
+    {
+        _stack = [NSMutableArray array];
 	}
 	
 	return self;
@@ -51,38 +54,26 @@
 
 - (id)peek
 {
-	return _stack.lastObject;
+	return self.stack.lastObject;
 }
 
 - (id)pop
 {
-	id object = _stack.lastObject;
+	id object = self.stack.lastObject;
 	
-	[_stack removeLastObject];
+	[self.stack removeLastObject];
 	
 	return object;
 }
 
 - (void)clear
 {
-	_stack = nil;
+	[self.stack removeAllObjects];
 }
 
 - (NSUInteger)count
 {
-	return _stack.count;
-}
-
-#pragma mark - Properties
-
-- (NSMutableArray *)stack
-{
-	if (_stack)
-		return _stack;
-	
-	_stack = [NSMutableArray array];
-	
-	return _stack;
+	return self.stack.count;
 }
 
 @end

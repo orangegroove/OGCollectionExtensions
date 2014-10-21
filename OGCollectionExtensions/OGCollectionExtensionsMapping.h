@@ -32,41 +32,41 @@
  @param block The mapping block. Returned nil values are ignored.
  @return The mapped collection.
  */
-- (NSArray *)mapToArray:(OGCollectionExtensionsObjectMapBlock)block;
+- (NSArray *)og_mapToArray:(id (^)(id object))block;
 
 /**
  Maps an array to a mutable array.
  @param block The mapping block. Returned nil values are ignored.
  @return The mapped collection.
  */
-- (NSMutableArray *)mapToMutableArray:(OGCollectionExtensionsObjectMapBlock)block;
+- (NSMutableArray *)og_mapToMutableArray:(id (^)(id object))block;
 
 /**
  Maps an array to a set.
  @param block The mapping block. Returned nil values are ignored.
  @return The mapped collection.
  */
-- (NSSet *)mapToSet:(OGCollectionExtensionsObjectMapBlock)block;
+- (NSSet *)og_mapToSet:(id (^)(id object))block;
 
 /**
  Maps an array to a mutable set.
  @param block The mapping block. Returned nil values are ignored.
  @return The mapped collection.
  */
-- (NSMutableSet *)mapToMutableSet:(OGCollectionExtensionsObjectMapBlock)block;
+- (NSMutableSet *)og_mapToMutableSet:(id (^)(id object))block;
 
 /**
  Maps an array to an ordered set.
  @param block The mapping block. Returned nil values are ignored.
  @return The mapped collection.
  */
-- (NSOrderedSet *)mapToOrderedSet:(OGCollectionExtensionsObjectMapBlock)block;
+- (NSOrderedSet *)og_mapToOrderedSet:(id (^)(id object))block;
 
 /**
  Maps an array to a mutable ordered set.
  @param block The mapping block. Returned nil values are ignored.
  @return The mapped collection.
  */
-- (NSMutableOrderedSet *)mapToMutableOrderedSet:(OGCollectionExtensionsObjectMapBlock)block;
+- (NSMutableOrderedSet *)og_mapToMutableOrderedSet:(id (^)(id object))block;
 
 @end

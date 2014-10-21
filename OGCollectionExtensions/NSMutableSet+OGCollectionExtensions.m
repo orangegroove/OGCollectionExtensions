@@ -29,7 +29,7 @@
 
 #pragma mark - OGCollectionExtensionsSafeMutation
 
-- (void)addObjectSafely:(id)anObject
+- (void)og_addObjectSafely:(id)anObject
 {
 	_ogceNoExceptionAddObjectToCollection(self, anObject);
 }
