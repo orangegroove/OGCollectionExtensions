@@ -50,32 +50,62 @@
 
 - (void)push:(id)object toStack:(id<NSCopying>)key
 {
-	[[self stackForKey:key] push:object];
+    @synchronized(self.stacks)
+    {
+        [[self stackForKey:key] push:object];
+    }
 }
 
 - (id)peekInStack:(id<NSCopying>)key
 {
-	return [self stackForKey:key].peek;
+    id object = nil;
+    
+    @synchronized(self.stacks)
+    {
+        object = [self stackForKey:key].peek;
+    }
+    
+    return object;
 }
 
 - (id)popStack:(id<NSCopying>)key
 {
-	return [[self stackForKey:key] pop];
+    id object = nil;
+    
+    @synchronized(self.stacks)
+    {
+        object = [[self stackForKey:key] pop];
+    }
+    
+    return object;
 }
 
 - (NSUInteger)countStack:(id<NSCopying>)key
 {
-	return [self stackForKey:key].count;
+    NSUInteger count = 0;
+    
+    @synchronized(self.stacks)
+    {
+        count = [self stackForKey:key].count;
+    }
+    
+    return 0;
 }
 
 - (void)clearStack:(id<NSCopying>)key
 {
-	[self.stacks removeObjectForKey:key];
+    @synchronized(self.stacks)
+    {
+        [self.stacks removeObjectForKey:key];
+    }
 }
 
 - (void)clearAll
 {
-	[self.stacks removeAllObjects];
+    @synchronized(self.stacks)
+    {
+        [self.stacks removeAllObjects];
+    }
 }
 
 #pragma mark - Private

@@ -49,31 +49,56 @@
 
 - (void)push:(id)object
 {
-	[self.stack addObject:object];
+    @synchronized(self.stack)
+    {
+        [self.stack addObject:object];
+    }
 }
 
 - (id)peek
 {
-	return self.stack.lastObject;
+    id object = nil;
+    
+    @synchronized(self.stack)
+    {
+        object = self.stack.lastObject;
+    }
+    
+    return object;
 }
 
 - (id)pop
 {
-	id object = self.stack.lastObject;
-	
-	[self.stack removeLastObject];
-	
+    id object = nil;
+    
+    @synchronized(self.stack)
+    {
+        object = self.stack.lastObject;
+        
+        [self.stack removeLastObject];
+    }
+    
 	return object;
 }
 
 - (void)clear
 {
-	[self.stack removeAllObjects];
+    @synchronized(self.stack)
+    {
+        [self.stack removeAllObjects];
+    }
 }
 
 - (NSUInteger)count
 {
-	return self.stack.count;
+    NSUInteger count = 0;
+    
+    @synchronized(self.stack)
+    {
+        count = self.stack.count;
+    }
+    
+	return count;
 }
 
 @end

@@ -49,34 +49,59 @@
 
 - (void)enqueue:(id)object
 {
-	[self.queue addObject:object];
+    @synchronized(self.queue)
+    {
+        [self.queue addObject:object];
+    }
 }
 
 - (id)dequeue
 {
-	id object = self.queue.firstObject;
-	
-    if (self.queue.count)
+    id object = nil;
+    
+    @synchronized(self.queue)
     {
-        [self.queue removeObjectAtIndex:0];
+        object = self.queue.firstObject;
+        
+        if (self.queue.count)
+        {
+            [self.queue removeObjectAtIndex:0];
+        }
     }
-	
+    
 	return object;
 }
 
 - (id)peek
 {
-	return self.queue.firstObject;
+    id object = nil;
+    
+    @synchronized(self.queue)
+    {
+        object = self.queue.firstObject;
+    }
+    
+    return object;
 }
 
 - (NSUInteger)count
 {
-	return self.queue.count;
+    NSUInteger count = 0;
+    
+    @synchronized(self.queue)
+    {
+        count = self.queue.count;
+    }
+    
+	return count;
 }
 
 - (void)clear
 {
-    [self.queue removeAllObjects];
+    @synchronized(self.queue)
+    {
+        [self.queue removeAllObjects];
+    }
 }
 
 @end

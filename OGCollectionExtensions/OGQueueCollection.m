@@ -50,32 +50,62 @@
 
 - (void)enqueue:(id)object inQueue:(id<NSCopying>)key
 {
-	[[self queueForKey:key] enqueue:object];
+    @synchronized(self.queues)
+    {
+        [[self queueForKey:key] enqueue:object];
+    }
 }
 
 - (id)dequeueQueue:(id<NSCopying>)key
 {
-	return [[self queueForKey:key] dequeue];
+    id object = nil;
+    
+    @synchronized(self.queues)
+    {
+        object = [[self queueForKey:key] dequeue];
+    }
+    
+    return object;
 }
 
 - (id)peekInQueue:(id<NSCopying>)key
 {
-	return [self queueForKey:key].peek;
+    id object = nil;
+    
+    @synchronized(self.queues)
+    {
+        object = [self queueForKey:key].peek;
+    }
+    
+    return object;
 }
 
 - (NSUInteger)countQueue:(id<NSCopying>)key
 {
-	return [self queueForKey:key].count;
+    NSUInteger count = 0;
+    
+    @synchronized(self.queues)
+    {
+        count = [self queueForKey:key].count;
+    }
+    
+    return count;
 }
 
 - (void)clearQueue:(id<NSCopying>)key
 {
-	[self.queues removeObjectForKey:key];
+    @synchronized(self.queues)
+    {
+        [self.queues removeObjectForKey:key];
+    }
 }
 
 - (void)clearAll
 {
-	[self.queues removeAllObjects];
+    @synchronized(self.queues)
+    {
+        [self.queues removeAllObjects];
+    }
 }
 
 #pragma mark - Private
